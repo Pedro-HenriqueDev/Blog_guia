@@ -14,7 +14,7 @@ postados.
  - Express-session
  - Body parser
  - EJS
- - Bcript
+ - Bcrypt
  - Mysql2
  - Slugify
 
