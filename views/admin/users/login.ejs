@@ -1,0 +1,21 @@
+<%- include ('../../partials/header.ejs'); %>
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-header">
+            <h2>Login:</h2>
+        </div>
+
+        <div class="card-body">
+            <form method="POST" action="/users/authenticate">
+                <input class="form-control" placeholder="E-mail" type="email" name="email">
+                <input class="form-control mt-2" placeholder="senha" type="password" name="password">
+                <button type="submit" class="btn btn-success btn-block mt-4">Criar</button>
+                <p>Cadastre-se <a href="/admin/users/create">aqui!</a></p>
+                <% if(error) { %>
+                    <p class="text-danger mt-2">Usuário ou senha incorreto</p>    
+                <%}%>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ('../../partials/footer.ejs'); %>

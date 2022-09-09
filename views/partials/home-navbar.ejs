@@ -1,0 +1,24 @@
+<nav class=" navbar navbar-dark bg-secondary">
+    <a href="/" class="navbar-brand">
+        Blog
+    </a>
+    
+    <div class="d-flex flex-row justify-content-end">
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorias
+            </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%categories.forEach(categories => {%>
+                    <a class="dropdown-item" href="/category/<%= categories.slug%>"><%= categories.title%></a>
+                <%})%>
+            </div>
+        </div>
+        <ul class="navbar-nav mr-3">
+            <li class="ml-3 nav-item active">
+                <a class="nav-link" href="/admin/users/create">Cadastre-se</a>
+            </li>
+        </ul>
+    </div>
+</nav>

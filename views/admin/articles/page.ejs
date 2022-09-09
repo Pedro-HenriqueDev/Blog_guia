@@ -1,0 +1,28 @@
+<%- include ('../../partials/header.ejs'); %>
+<%- include ('../../partials/home-navbar.ejs'); %>
+<body>
+<div class="container">
+    <% result.articles.rows.forEach(articles => {%>
+        <div class="card">
+            <div class="card-header m-3">
+                <h2><%= articles.title%></h2>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="">Ler artigo</a>
+            </div>
+
+        </div>
+    <%})%>
+    <hr>
+        <div class="row d-flex justify-content-end">      
+            <%if (result.page > 0) {%>
+                <a class="mr-5" href="/article/page/<%= result.page - 1%>"> < Anterior</a>
+            <%}if (result.next) {%>
+                <a href="/article/page/<%= result.page + 1%>">Próximo ></a>
+            <%}%>
+
+
+        </div>
+</div>
+</body>
+<%- include ('../../partials/footer.ejs'); %>

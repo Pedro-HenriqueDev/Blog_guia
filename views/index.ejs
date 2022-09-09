@@ -1,0 +1,32 @@
+<%- include ('./partials/header.ejs'); %>
+<%- include ('./partials/home-navbar.ejs'); %>
+<body>
+    <div class="jumbotron d-flex justify-content-center">
+        <div>
+            <h1 class="display-4">Bem vindo ao Blogado!</h1>
+            <hr class="my-4">
+            <p class="lead">Artigos com vários temas do seu interesse!</p>
+            <p>Fique a vontade para postar os seus artigos</p>
+            <a class="btn btn-primary btn-lg" href="/users/login" role="button">Login</a>
+        </div>
+    </div>
+<div class="container">
+
+    <% articles.forEach(article => {%>
+        <div class="card">
+            <div class="card-header m-3">
+                <h2><%=article.title%></h2>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="/<%= article.slug%>">Ler artigo</a>
+            </div>
+        </div>
+        <%})%>
+        <hr>
+        <div class="row d-flex justify-content-end">      
+            <a href="/article/page/1">Próximo ></a>
+
+        </div>
+</div>
+</body>
+<%- include ('./partials/footer.ejs'); %>
