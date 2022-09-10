@@ -17,6 +17,7 @@ postados.
  - Bcrypt
  - Mysql2
  - Slugify
+ - Nodemon
 
 ### Outras ferramentas usadas:
  - Bootstrap
